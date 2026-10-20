@@ -60,10 +60,14 @@
   // Ambient loops play only while visible; static poster on small screens / reduced motion
   const small=window.matchMedia('(max-width:767px)').matches;
   const cv=$('closingVideo'), pv=$('pauseVideo');
-  if(reduce||small){cv.removeAttribute('src');cv.load();}
-  else io(cv,e=>{e.isIntersecting?cv.play().catch(()=>{}):cv.pause();},[0]);
-  if(reduce){pv.removeAttribute('loop');pv.pause();}
-  else io(pv,e=>{e.isIntersecting?pv.play().catch(()=>{}):pv.pause();},[0]);
+  // Heavy loops load only when their screen comes near (poster shows until then)
+  const lazySrc=(v)=>{if(v.dataset.src&&!v.src){v.src=v.dataset.src;}};
+  const near=(el,fn)=>{const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){fn();o.disconnect();}},{rootMargin:'600px 0px'});o.observe(el);};
+  const lazyPoster=(v)=>{if(v.dataset.poster&&!v.poster)v.poster=v.dataset.poster;};
+  near(cv,()=>{lazyPoster(cv);if(!(reduce||small))lazySrc(cv);});
+  near(pv,()=>{lazyPoster(pv);if(!reduce)lazySrc(pv);});
+  if(!(reduce||small)) io(cv,e=>{e.isIntersecting?cv.play().catch(()=>{}):cv.pause();},[0]);
+  if(!reduce) io(pv,e=>{e.isIntersecting?pv.play().catch(()=>{}):pv.pause();},[0]);
 
   io($('closingC'),e=>{if(e.isIntersecting&&e.intersectionRatio>=.3){$('closingC').classList.add('is-in');$('s6h').classList.add('is-in');}});
 

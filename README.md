@@ -51,3 +51,11 @@ Copy in square brackets is a placeholder.
 ```bash
 ffmpeg -i source.mp4 -g 1 -an -c:v libx264 -crf 27 -pix_fmt yuv420p -movflags +faststart media/hero.mp4
 ```
+
+
+## Media loading (optimised)
+- hero.mp4: H.264, keyframe every 4 frames, no B-frames (smooth scroll scrubbing), fetched whole on load; hero-poster.jpg is preloaded so the first screen appears at once.
+- pause.mp4 / closing.mp4: src and poster are set from data-src / data-poster when the screen is 600px away (closing stays poster-only on phones).
+- ui-gia.mp4 loads when the hero is 40% scrolled; gia.mp4 preloads metadata only.
+- Catalog tiles: 640w and 1200w webp via srcset, lazy.
+- _sources/ holds originals (interface 3840 px, Gia window video, tile PNGs, earlier Gia videos). The site never loads them: do not upload _sources/ to hosting.
