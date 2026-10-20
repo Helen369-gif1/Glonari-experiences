@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glonari Experiences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="gd-container site-header__in">
+    <a href="#s1" aria-label="Glonari Digital Banker, back to top"><img class="logo" src="media/brand/logo.webp" alt="Glonari Digital Banker" width="130" height="46"></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#s2">Overview</a>
+      <a href="#s3">Gia</a>
+      <a href="#s4">Activate</a>
+      <a href="#s5">Manage</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--secondary btn--sm" href="#s1">Log in</a>
+      <a class="btn btn--primary btn--sm" href="#s2">Explore Experiences</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- SCREEN 1 · INTRODUCTION -->
+<section class="hero" id="s1" aria-label="Introduction">
+  <div class="stage" id="heroStage">
+    <video class="hero__video" id="heroVideo" data-src="media/hero.mp4" poster="media/hero-poster.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+    <div class="hero__veil" id="heroVeil"></div>
+    <div class="hero__text">
+      <h1 class="hero__h1 split-words" data-lines="Your Glonari experiences.|All in one place.">Your Glonari experiences. All in one place.</h1>
+      <div class="hero__b2" id="heroB2"><p class="hero__body">Programs and services that support your work, plans, and everyday life. Gia helps you understand your options and choose what matters to you.</p></div>
+    </div>
+    <div class="cue" id="cue" aria-hidden="true">Scroll<span class="cue__line"></span></div>
+    <div class="portal" id="portal" aria-hidden="true">
+      <div class="portal__ui" id="portalUi">
+        <img src="media/ui.webp" alt="" width="3200" height="2000" decoding="async">
+        <!-- live Gia for the central window: set data-src to media/ui-gia.mp4 once the new video is ready -->
+        <video class="portal__gia" id="uiGia" data-src="media/ui-gia.mp4" muted loop playsinline preload="none"></video>
+      </div>
+      <div class="portal__glow" id="portalGlow"></div>
+      <div class="portal__dim" id="portalDim"></div>
+      <div class="portal__seam" id="portalSeam"></div>
+    </div>
+    <!-- Screen 2 heading shown over the dimmed interface (the original stays in Screen 2 for assistive tech) -->
+    <div class="bridge" id="bridge" aria-hidden="true">
+      <p class="bridge__h split-words" data-lines="Everything you use, together.">Everything you use, together.</p>
+      <p class="bridge__lead" id="bridgeLead">Personal Gia capabilities, family and business programs, and other Glonari services in one place. See what’s active, what’s included, and what you can explore next.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 2 -->
+<section class="gd-section" id="s2" aria-labelledby="s2h" style="padding-top:clamp(72px,8vw,120px)">
+  <div class="gd-container">
+    <div class="center-head">
+      <h2 class="h2 split-words io-words" id="s2h">Everything you use, together.</h2>
+      <p class="lead rv" style="--d:300ms">Personal Gia capabilities, family and business programs, and other Glonari services in one place. See what’s active, what’s included, and what you can explore next.</p>
+    </div>
+
+    <div class="catalog rv-scale" id="catalog">
+      <div class="catalog__side" role="group" aria-label="Categories">
+        <span class="label">CATEGORIES</span>
+        <button class="cat" data-cat="all" aria-pressed="true">All experiences <span class="cat__n">8</span></button>
+        <button class="cat" data-cat="gia" aria-pressed="false">Personal Gia capabilities <span class="cat__n">2</span></button>
+        <button class="cat" data-cat="family" aria-pressed="false">Family programs <span class="cat__n">2</span></button>
+        <button class="cat" data-cat="business" aria-pressed="false">Business programs <span class="cat__n">2</span></button>
+        <button class="cat" data-cat="services" aria-pressed="false">Other Glonari services <span class="cat__n">2</span></button>
+      </div>
+      <div class="catalog__main">
+        <div class="catalog__bar">
+          <div class="search" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            Ask Gia or search Experiences
+          </div>
+          <div class="filters" role="group" aria-label="Status">
+            <button class="chip" data-st="all" aria-pressed="true">All</button>
+            <button class="chip" data-st="active" aria-pressed="false">Active</button>
+            <button class="chip" data-st="included" aria-pressed="false">Included</button>
+            <button class="chip" data-st="explore" aria-pressed="false">Explore next</button>
+          </div>
+        </div>
+        <div class="tiles" id="tiles">
+          <article class="tile" data-cat="gia" data-st="active"><img src="media/tiles/tile-1.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">PERSONAL GIA</span><h3 class="tile__t">[Gia capability]</h3><span class="status status--active">Active</span></div></article>
+          <article class="tile" data-cat="family" data-st="included"><img src="media/tiles/tile-2.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">FAMILY</span><h3 class="tile__t">[Family program]</h3><span class="status status--included">Included</span></div></article>
+          <article class="tile" data-cat="business" data-st="active"><img src="media/tiles/tile-3.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">BUSINESS</span><h3 class="tile__t">[Business program]</h3><span class="status status--active">Active</span></div></article>
+          <article class="tile" data-cat="services" data-st="explore"><img src="media/tiles/tile-4.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">GLONARI SERVICE</span><h3 class="tile__t">[Glonari service]</h3><span class="status status--explore">Explore next</span></div></article>
+          <article class="tile" data-cat="gia" data-st="explore"><img src="media/tiles/tile-5.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">PERSONAL GIA</span><h3 class="tile__t">[Gia capability]</h3><span class="status status--explore">Explore next</span></div></article>
+          <article class="tile" data-cat="family" data-st="active"><img src="media/tiles/tile-6.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">FAMILY</span><h3 class="tile__t">[Family program]</h3><span class="status status--active">Active</span></div></article>
+          <article class="tile" data-cat="business" data-st="explore"><img src="media/tiles/tile-7.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">BUSINESS</span><h3 class="tile__t">[Business program]</h3><span class="status status--explore">Explore next</span></div></article>
+          <article class="tile" data-cat="services" data-st="included"><img src="media/tiles/tile-8.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><div class="tile__b"><span class="tile__cat">GLONARI SERVICE</span><h3 class="tile__t">[Glonari service]</h3><span class="status status--included">Included</span></div></article>
+          <p class="empty" id="empty" hidden>Nothing here yet. Choose another category or status.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 3 -->
+<section class="gd-section gd-section--soft" id="s3" aria-labelledby="s3h">
+  <div class="gd-container split split--40">
+    <div class="gia-media rv-scale" id="giaMedia">
+      <video id="giaVideo" src="media/gia.mp4" poster="media/gia-poster.jpg" muted playsinline preload="metadata" aria-hidden="true"></video>
+      <div class="bubbles">
+        <p class="bubble bubble--you" id="b1"><span class="bubble__who">YOU</span>[What you’re trying to do, in your own words]</p>
+        <p class="bubble bubble--gia" id="b2"><span class="bubble__who">GIA</span>[Gia’s answer: the differences explained and two options to compare]</p>
+      </div>
+    </div>
+    <div class="text-col">
+      <h2 class="h2 split-words io-words" id="s3h">You don’t have to figure it all out alone.</h2>
+      <p class="lead rv" style="--d:300ms">Tell Gia what you’re trying to do. She explains the differences, helps compare terms, and brings you options based on your goals and preferences.</p>
+      <div class="compare rv">
+        <div class="compare__head"><span class="label label--sq">OPTIONS FROM GIA</span><span class="label">[YOUR GOAL]</span></div>
+        <div class="scroll-x">
+          <table>
+            <thead><tr><th scope="col"><span class="ph">Compare</span></th><th scope="col" class="pick">[Option A]<span class="tag-pick">FITS YOUR GOAL</span></th><th scope="col">[Option B]</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">What’s included</th><td class="pick ph">[Included items]</td><td class="ph">[Included items]</td></tr>
+              <tr><th scope="row">Terms</th><td class="pick ph">[Term length]</td><td class="ph">[Term length]</td></tr>
+              <tr><th scope="row">Who’s included</th><td class="pick ph">[Members]</td><td class="ph">[Members]</td></tr>
+              <tr><th scope="row">Price</th><td class="pick ph">[Price]</td><td class="ph">[Price]</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 4 -->
+<section class="gd-section" id="s4" aria-labelledby="s4h">
+  <div class="gd-container split">
+    <div class="text-col">
+      <h2 class="h2 split-words io-words" id="s4h">From choosing to the next step.</h2>
+      <p class="lead rv" style="--d:300ms">Gia helps you explore a program, review its terms, and prepare an activation or package change.</p>
+      <ol class="steps" id="steps">
+        <li class="step"><span class="step__n">01</span><span class="step__t">Explore a program</span></li>
+        <li class="step"><span class="step__n">02</span><span class="step__t">Review its terms</span></li>
+        <li class="step"><span class="step__n">03</span><span class="step__t">Prepare an activation or package change</span></li>
+        <li class="step"><span class="step__n">04</span><span class="step__t">You approve</span></li>
+      </ol>
+      <p class="note rv">Important changes and paid actions always require your approval.</p>
+    </div>
+    <div class="approve rv-scale" aria-label="Example approval card">
+      <div class="approve__top">
+        <span class="label label--sq">READY FOR YOUR APPROVAL</span>
+        <h3 class="approve__title">[Program name] activation</h3>
+      </div>
+      <dl class="rows">
+        <div><dt>What changes</dt><dd class="ph">[Package change]</dd></div>
+        <div><dt>Terms</dt><dd class="ph">[Term length]</dd></div>
+        <div><dt>Who’s included</dt><dd class="ph">[Members]</dd></div>
+        <div><dt>Price</dt><dd class="ph">[Price / period]</dd></div>
+        <div><dt>Starts</dt><dd class="ph">[Date]</dd></div>
+      </dl>
+      <div class="approve__foot">
+        <div class="approve__gia"><img class="av av--sm" src="media/brand/gia-avatar.webp" alt=""><span>[Gia’s one-line summary of what will change]</span></div>
+        <div class="approve__btns">
+          <button class="btn btn--primary" type="button" id="approveBtn">Approve</button>
+          <button class="btn btn--secondary" type="button" id="laterBtn">Not now</button>
+        </div>
+        <p class="approve__done" id="approveMsg" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAUSE · REVEAL VIDEO -->
+<section class="pause" id="pause" aria-label="Every Experience leads here">
+  <div class="stage" id="pauseStage">
+    <div class="pause__frame" id="pauseFrame">
+      <video id="pauseVideo" src="media/pause.mp4" poster="media/pause-poster.jpg" muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <div class="pause__veil" id="pauseVeil"></div>
+    </div>
+    <div class="pause__h" id="pauseWrap"><p class="pause__t split-words" id="pauseH">Every Experience leads here.</p></div>
+  </div>
+</section>
+
+<!-- SCREEN 5 · STAY IN CONTROL -->
+<section class="control" id="s5" aria-labelledby="s5h">
+  <div class="stage">
+    <div class="gd-container">
+      <div class="center-head asm" data-a="0">
+        <h2 class="h2" id="s5h">Manage what matters to you.</h2>
+        <p class="lead">See which services are active, who’s included, when renewals are due, and what terms apply. Gia can flag important updates and help prepare changes when needed.</p>
+      </div>
+      <div class="holo asm" data-a=".08">
+        <div class="holo__head asm" data-a=".14"><div class="holo__title">Your Experiences</div><div class="holo__note">Example interface — not your account.</div></div>
+        <div class="holo__grid">
+          <div class="holo__col">
+            <div class="cell asm" data-a=".34"><div class="cell__k">Included</div><div class="cell__v" data-count="5">5</div><div class="cell__c">Experiences in your plan</div></div>
+            <div class="cell asm" data-a=".46"><div class="cell__k">Renewals</div><div class="cell__v" data-count="12" data-suffix=" days">12 days</div><div class="cell__c">Until the next renewal</div></div>
+          </div>
+          <div class="holo__ring asm" data-a=".22" aria-label="3 of 4 Experiences active">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="none" stroke="var(--gd-night-hair)" stroke-width="6"/><circle cx="100" cy="100" r="74" fill="none" stroke="var(--gd-night-hair)" stroke-width="1"/><circle id="holoArc" cx="100" cy="100" r="90" fill="none" stroke="var(--gd-champagne)" stroke-width="6" stroke-linecap="round" stroke-dasharray="565.5" stroke-dashoffset="565.5"/></svg>
+            <div class="ring__in"><span class="ring__n">3 of 4</span><span class="ring__c">Experiences active</span></div>
+          </div>
+          <div class="holo__col">
+            <div class="cell asm" data-a=".40"><div class="cell__k">Who’s included</div><div class="cell__v" data-count="4">4</div><div class="cell__c">People on your plan</div></div>
+            <div class="cell asm" data-a=".52"><div class="cell__k">Terms</div><div class="cell__v" data-count="2">2</div><div class="cell__c">Updates to review</div></div>
+          </div>
+        </div>
+        <div class="holo__flag asm" data-a=".62">
+          <img class="av av--sm" src="media/brand/gia-avatar.webp" alt="">
+          <p>[A renewal has new terms. Gia can prepare the change for your approval.]</p>
+          <a class="btn btn--ondark btn--sm" href="#s4">Prepare change</a>
+        </div>
+      </div>
+    </div>
+    <div class="marquee asm" data-a=".7" aria-label="Updates Gia can flag">
+      <div class="marquee__track">
+        <ul><li class="pill">Renewal due</li><li class="pill">Member added</li><li class="pill">Terms updated</li><li class="pill">Package changed</li><li class="pill">Service activated</li><li class="pill">Approval needed</li></ul>
+        <ul aria-hidden="true"><li class="pill">Renewal due</li><li class="pill">Member added</li><li class="pill">Terms updated</li><li class="pill">Package changed</li><li class="pill">Service activated</li><li class="pill">Approval needed</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 6 · CLOSING -->
+<section class="closing" id="s6" aria-labelledby="s6h">
+  <video id="closingVideo" src="media/closing.mp4" poster="media/closing-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  <div class="closing__veil"></div>
+  <div class="closing__c" id="closingC">
+    <h2 class="closing__h split-words" id="s6h">Get more from every Experience.</h2>
+    <p class="closing__p fade">More than a service catalog: a place where Gia helps you choose, use, and manage your Glonari experiences.</p>
+    <div class="closing__cta fade fade--2"><a class="btn btn--primary" href="#s2">Explore Experiences</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="gd-container">
+    <div class="foot">
+      <a href="#s1" aria-label="Glonari Digital Banker, back to top"><img class="logo" src="media/brand/logo.webp" alt="Glonari Digital Banker" width="181" height="64"></a>
+      <nav aria-label="Footer navigation"><a href="#s2">Overview</a><a href="#s3">Gia</a><a href="#s4">Activate</a><a href="#s5">Manage</a><a href="#s1">Terms</a><a href="#s1">Privacy</a></nav>
+    </div>
+    <div class="legal"><span>[Legal line: Experiences is part of the Glonari platform.]</span><span>© 2026 Glonari</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
